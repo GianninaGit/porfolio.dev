@@ -1,0 +1,44 @@
+---
+import SwiftIcon from '../components/icons/SwiftIcon.astro'
+const TAGS = {
+  SWIFT: {
+    name: 'Swift', 
+    class: 'bg-black/10 text-black',
+    icon: SwiftIcon 
+    }
+}
+const PROJECTS = [
+    {
+        title: 'H4x0R News',
+        description: 'Great source of Exploits, Hacking Tools, Cyber Security and Network Security for Information security professionals, infosec researchers and hackers.', 
+        link: 'https://github.com/GianninaGit/H4x0R-News-SwiftUI', 
+        github: 'https://github.com/GianninaGit/H4x0R-News-SwiftUI/',
+        image: 'https://media.rawg.io/media/resize/420/-/screenshots/1d7/1d7a2e4182925b1c71b0388a3006eabc.jpg', 
+        tags: [TAGS.SWIFT]
+    }
+]
+
+---
+
+{
+    PROJECTS.map(({title, description, tags, image}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-red-500/90 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-4 flex-row mb-2">
+                {tags.map(tag => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-s ${tag.class} py-1 px-2`}>
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img 
+                class="rounded shadow-2xl shadow-black/20 flex justify-center items-center" 
+                src={image} 
+                alt={`Captura de pantalla del proyecto ${image}`} />
+        </article>
+    ))
+}

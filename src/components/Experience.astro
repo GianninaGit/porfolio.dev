@@ -1,0 +1,49 @@
+---
+import ExperienceItem from "./icons/ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Presente', 
+        title: 'QA Engineer - Axpe Consulting S.L.', 
+        description:
+        'QA Engineer at Inditex Group. E2E testing. Visual Studio Code. Bash. JavaScript. Cypress. Gherkin. Git. NodeJS. GitHub. Agile (Scrum). Jira.'
+    },
+    {
+        date: 'Aug 2023 - Dec 2023', 
+        title: 'QA Engineer - Holded Technologies S.L.', 
+        description:
+        'Automate test cases using Cypress end-to-end testing framework. JavaScript. Gherkin.'
+    },
+    {
+        date: 'Apr 2022 - Aug 2023', 
+        title: 'QA Analyst - Holded Technologies S.L.', 
+        description:
+        '• Work alongside backend, frontend and full-stack developers, Product Owners, QAs and Tech Leads; in an Agile environment (Scrum), from initial product design to deployment, ensuring optimal communication and alignment throughout the development lifecycle. • API REST testing with Postman, Google Cloud logs, HTTP network and console logs, NoSQL databases like MongoDB, Datadog. Jira. Github. Slack. • Design and implement test cases to ensure proper product functionality: functional, exploratory, integration and regression tests, in accounting areas like: Invoices, Purchases, Accounting accounts, General Ledger, Taxes, AEAT tax Forms, Ticket BAI, SII, Sage, E-Invoice, Payrolls, Finance Reports, integration with other e-commerce like Shopify, Woocommerce and Prestashop.'
+    },
+    {
+        date: 'Mar 2021 - Apr 2022', 
+        title: 'Software Quality Assurance Developer - IBM', 
+        description:
+        'Experiencia en testing de plataformas web y mobile (Android & iOS), análisis de Back Office (request/response) orientado a inversiones bancarias del cliente Grupo Financiero Galicia.Certifiqué para Amazon Web Service Cloud Practitioner. Trabajo diario con el Equipo de Desarrolladores, Diseñadores de Producto, TO y PO. Herramientas utilizadas: HP ALM Life Cycle, SAP, Ignite Quality Platform (IQP), Combinatorial Test Design (CTD), Optimized Test Flow Automation (OTFA), BrowserStack, Kibana'
+    },
+    {
+        date: 'Nov 2019 - Feb 2021', 
+        title: 'QA Analyst - Lightvessel', 
+        description:
+        'Trabajando junto al Equipo De Desarrollo. Metodologias Ágiles - Scrum. Sobre plataformas web y mobile. Tareas realizadas: Creación de casos de prueba. Revisión de casos de prueba. Ejecución de casos de prueba. Reporte y seguimiento de bugs. Relevamiento de comentarios y valoraciones de usuarios. Análisis de sentimiento de usuarios.'
+    }
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience} />
+        </li>
+        ))
+    }                  
+</ol>
+
+
