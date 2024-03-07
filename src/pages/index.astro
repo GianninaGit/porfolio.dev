@@ -30,13 +30,16 @@ import SectionContainer from '../components/SectionContainer.astro'
 		</SectionContainer>
 		
 		<SectionContainer class="desc-pills mx-4 lg:mx-auto lg:max-w-[900px] lg:px-8 lg:py-12">
-			<h2 class="text-xl lg:text-xl text-wrap max-w-[700px]">
-				<span>Junior Frontend & iOS Developer.</span>
-				<span class="text-red-500/90"> De Buenos Aires a Barcelona, España.</span>
-				<span class="opacity-95"> Especializada en crear aplicaciones únicas.</span>
-			</h2>
+			<div class="flex justify-center items-center">
+
+				<h2 class="text-xl lg:text-xl text-wrap max-w-[700px]">
+					<span>Junior Frontend & iOS Developer.</span>
+					<span class="text-red-500/90"> De Buenos Aires a Barcelona, España.</span>
+					<span class="opacity-95"> Especializada en crear aplicaciones únicas.</span>
+				</h2>
+			</div>
 			
-			<nav class="flex flex-wrap gap-4 mt-8 justify-center">
+			<nav class="flex flex-wrap gap-4 lg:mt-10 mt-4 justify-center">
 				<SocialPill href="https://www.linkedin.com/in/gianninasarappa/">
 					<LinkedInIcon class="size-4 md:size-6" />
 						LinkedIn
@@ -52,9 +55,6 @@ import SectionContainer from '../components/SectionContainer.astro'
 			</nav> 
 		</SectionContainer>
 		
-		
-		
-
 		<SectionContainer id="experiencia">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-8" />
