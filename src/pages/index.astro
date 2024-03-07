@@ -55,14 +55,16 @@ import SectionContainer from '../components/SectionContainer.astro'
 			</nav> 
 		</SectionContainer>
 		
-		<SectionContainer id="experiencia">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Briefcase class="size-8" />
-				Experiencia laboral</h2>
-			<Experience />
+		<SectionContainer id="experiencia" class="experiencia mx-4 lg:mx-auto lg:max-w-[900px] lg:px-8 lg:py-12">
+			<div>
+				<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+					<Briefcase class="size-8" />
+					Experiencia laboral</h2>
+				<Experience />
+			</div>
 		</SectionContainer>
 		
-		<SectionContainer id="proyectos">
+		<SectionContainer id="proyectos" class="proyectos mx-4 lg:mx-auto lg:max-w-[900px] lg:px-8 lg:py-12">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-8" />
 				Proyectos</h2>
