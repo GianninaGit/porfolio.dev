@@ -17,17 +17,21 @@ import SectionContainer from '../components/SectionContainer.astro'
 	description="Contrata a Giannina Sarappa para crear tu aplicación web o móvil. Desarrollador Web. Especializada en crear aplicaciones únicas.">
 	
 	<main class="max-w-500 min-w-320">
-		<SectionContainer class="py-44 pb-30">
-			<div class="relative">
-				<img 
-					class="rounded-full w-12 h-12 mb-4 absolute left-0 top-0" 
-					src="https://media.licdn.com/dms/image/D4D03AQHk8GuCZPaePQ/profile-displayphoto-shrink_200_200/0/1708708837144?e=1715212800&v=beta&t=tmSEaEg-2h_AdbOVxfvKLvjHzwbGWWBhanTBkqMFR4o" 
-					alt="giannina photo" 
-				/>
-    		
-			<h1 class="text-black text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lg:pb-10">
-				Hey, soy Giannina <a href="https://www.linkedin.com/in/gianninasarappa/" target="_blank" rel="noopener" class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge></a></h1> 
+		<SectionContainer class="img-hey-dispo">
+			<div class="flex flex-col items-center lg:flex-row lg:items-center lg:justify-center">
+				<div class="relative flex-shrink-0 mr-0 mb-4 lg:mr-8 lg:mb-0">
+					<img class="rounded-full w-20 h-20 lg:w-24 lg:h-24" src="https://media.licdn.com/dms/image/D4D03AQHk8GuCZPaePQ/profile-displayphoto-shrink_200_200/0/1708708837144?e=1715212800&v=beta&t=tmSEaEg-2h_AdbOVxfvKLvjHzwbGWWBhanTBkqMFR4o" alt="giannina photo" />
+				</div>
+				<div class="text-center lg:text-left">
+					<h1 class="text-black text-2xl md:text-3xl lg:text-4xl font-bold mb-2 lg:mb-0">Hey, soy Giannina</h1>
+					<a href="https://www.linkedin.com/in/gianninasarappa/" target="_blank" rel="noopener" class="inline-block ml-0 mt-2 lg:ml-0 lg:mt-5"><Badge>Disponible para trabajar</Badge></a>
+				</div>
+			</div>
+		</SectionContainer>
+		
+		
+		
+		<SectionContainer>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span>Junior Frontend & iOS Developer.</span>
 				<span class="text-red-500/90"> De Buenos Aires a Barcelona, España.</span>
