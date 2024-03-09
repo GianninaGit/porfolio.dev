@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+
+/tateti/* https://65ecb56293097cd813fe7e14--tangerine-figolla-5c3f37.netlify.app/:splat 301
+
