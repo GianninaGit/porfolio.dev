@@ -21,7 +21,6 @@ const PROJECTS = [
         description: '', 
         link: 'https://65ecb56293097cd813fe7e14--tangerine-figolla-5c3f37.netlify.app/', 
         github: 'https://github.com/GianninaGit/tateti.git',
-        //image: 'https://private-user-images.githubusercontent.com/95765874/311463121-0edab369-0a55-4c52-b2c0-cec819bb811d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTAwMTI4NTksIm5iZiI6MTcxMDAxMjU1OSwicGF0aCI6Ii85NTc2NTg3NC8zMTE0NjMxMjEtMGVkYWIzNjktMGE1NS00YzUyLWIyYzAtY2VjODE5YmI4MTFkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAzMDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMzA5VDE5MjkxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVjZjU0NGJhZDY3ZGZhNjIyOTFiOTE3YWY0ZGVkNTlhZDkxYmUwZWYxYzk5ZWE1ZGM5NmQ5YjM0ZjgxNGNmYWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kv-9iaUmSjmo6Pzfu3mj-n6EGd5l0lUvEgx1CNZlBjM', 
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
     }
 ]
@@ -29,7 +28,7 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({title, description, link, github, tags, image}) => (
+    PROJECTS.map(({title, description, link, github, tags}) => (
         <article>
             <h3 class="text-2xl font-semibold text-red-500/90 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
@@ -45,17 +44,7 @@ const PROJECTS = [
                         </span>
                     </li>
                 ))}
-            </ul>
-            
-            <!-- 
-                <img 
-                    class="rounded shadow-2xl shadow-black/20 flex justify-center items-center" 
-                    src={image} 
-                    alt={`Captura de pantalla del proyecto ${image}`} 
-                />
-            -->
-            
-                
+            </ul>           
         </article>
     ))
 }
