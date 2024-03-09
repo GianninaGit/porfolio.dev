@@ -1,44 +1,61 @@
 ---
-import SwiftIcon from '../components/icons/SwiftIcon.astro'
+
 const TAGS = {
-  SWIFT: {
-    name: 'Swift', 
-    class: 'bg-black/10 text-black',
-    icon: SwiftIcon 
+  HTML: {
+    name: 'HTML', 
+    class: 'bg-black/10 text-black'
+    },
+  CSS: {
+    name: 'CSS', 
+    class: 'bg-black/10 text-black'
+    },
+  JavaScript: {
+    name: 'JavaScript', 
+    class: 'bg-black/10 text-black'
     }
+
 }
 const PROJECTS = [
     {
-        title: 'H4x0R News',
-        description: 'Great source of Exploits, Hacking Tools, Cyber Security and Network Security for Information security professionals, infosec researchers and hackers.', 
-        link: 'https://github.com/GianninaGit/H4x0R-News-SwiftUI', 
-        github: 'https://github.com/GianninaGit/H4x0R-News-SwiftUI/',
-        image: 'https://media.rawg.io/media/resize/420/-/screenshots/1d7/1d7a2e4182925b1c71b0388a3006eabc.jpg', 
-        tags: [TAGS.SWIFT]
+        title: 'TaTeTi',
+        description: '', 
+        link: 'https://65ecb56293097cd813fe7e14--tangerine-figolla-5c3f37.netlify.app/', 
+        github: 'https://github.com/GianninaGit/tateti.git',
+        //image: 'https://private-user-images.githubusercontent.com/95765874/311463121-0edab369-0a55-4c52-b2c0-cec819bb811d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTAwMTI4NTksIm5iZiI6MTcxMDAxMjU1OSwicGF0aCI6Ii85NTc2NTg3NC8zMTE0NjMxMjEtMGVkYWIzNjktMGE1NS00YzUyLWIyYzAtY2VjODE5YmI4MTFkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAzMDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMzA5VDE5MjkxOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVjZjU0NGJhZDY3ZGZhNjIyOTFiOTE3YWY0ZGVkNTlhZDkxYmUwZWYxYzk5ZWE1ZGM5NmQ5YjM0ZjgxNGNmYWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kv-9iaUmSjmo6Pzfu3mj-n6EGd5l0lUvEgx1CNZlBjM', 
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
     }
 ]
 
 ---
 
 {
-    PROJECTS.map(({title, description, tags, image}) => (
+    PROJECTS.map(({title, description, link, github, tags, image}) => (
         <article>
             <h3 class="text-2xl font-semibold text-red-500/90 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-4 flex-row mb-2">
+            <div class="flex flex-col mb-4">
+                <a href={link} class="mb-2 text-blue-500 hover:underline" >▶️ ¡Juega ahora!</a>
+                <a href={github} class="text-blue-500 hover:underline">🔗 Ver en GitHub</a>
+            </div>
+            <ul class="flex gap-x-4 flex-row mb-4">
                 {tags.map(tag => (
                     <li>
                         <span class={`flex gap-x-2 rounded-full text-s ${tag.class} py-1 px-2`}>
-                            <tag.icon class="size-4" />
                             {tag.name}
                         </span>
                     </li>
                 ))}
             </ul>
-            <img 
-                class="rounded shadow-2xl shadow-black/20 flex justify-center items-center" 
-                src={image} 
-                alt={`Captura de pantalla del proyecto ${image}`} />
+            
+            <!-- 
+                <img 
+                    class="rounded shadow-2xl shadow-black/20 flex justify-center items-center" 
+                    src={image} 
+                    alt={`Captura de pantalla del proyecto ${image}`} 
+                />
+            -->
+            
+                
         </article>
     ))
 }
